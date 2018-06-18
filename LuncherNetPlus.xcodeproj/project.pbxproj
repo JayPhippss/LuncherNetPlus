@@ -14,18 +14,10 @@
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
 		769274A220D45A3600A3062A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769274A020D45A3600A3062A /* LaunchScreen.storyboard */; };
 		769274AD20D45A3600A3062A /* LuncherNetPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769274AC20D45A3600A3062A /* LuncherNetPlusTests.swift */; };
-		769274B820D45A3600A3062A /* LuncherNetPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769274B720D45A3600A3062A /* LuncherNetPlusUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		769274A920D45A3600A3062A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7692748A20D45A3500A3062A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7692749120D45A3500A3062A;
-			remoteInfo = LuncherNetPlus;
-		};
-		769274B420D45A3600A3062A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7692748A20D45A3500A3062A /* Project object */;
 			proxyType = 1;
@@ -46,7 +38,6 @@
 		769274A820D45A3600A3062A /* LuncherNetPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuncherNetPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769274AC20D45A3600A3062A /* LuncherNetPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuncherNetPlusTests.swift; sourceTree = "<group>"; };
 		769274AE20D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		769274B320D45A3600A3062A /* LuncherNetPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuncherNetPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769274B720D45A3600A3062A /* LuncherNetPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuncherNetPlusUITests.swift; sourceTree = "<group>"; };
 		769274B920D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,13 +51,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		769274A520D45A3600A3062A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		769274B020D45A3600A3062A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,7 +75,6 @@
 			children = (
 				7692749220D45A3500A3062A /* LuncherNetPlus.app */,
 				769274A820D45A3600A3062A /* LuncherNetPlusTests.xctest */,
-				769274B320D45A3600A3062A /* LuncherNetPlusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,24 +149,6 @@
 			productReference = 769274A820D45A3600A3062A /* LuncherNetPlusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		769274B220D45A3600A3062A /* LuncherNetPlusUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 769274C220D45A3600A3062A /* Build configuration list for PBXNativeTarget "LuncherNetPlusUITests" */;
-			buildPhases = (
-				769274AF20D45A3600A3062A /* Sources */,
-				769274B020D45A3600A3062A /* Frameworks */,
-				769274B120D45A3600A3062A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				769274B520D45A3600A3062A /* PBXTargetDependency */,
-			);
-			name = LuncherNetPlusUITests;
-			productName = LuncherNetPlusUITests;
-			productReference = 769274B320D45A3600A3062A /* LuncherNetPlusUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +163,6 @@
 						CreatedOnToolsVersion = 9.4;
 					};
 					769274A720D45A3600A3062A = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 7692749120D45A3500A3062A;
-					};
-					769274B220D45A3600A3062A = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = 7692749120D45A3500A3062A;
 					};
@@ -222,7 +183,6 @@
 			targets = (
 				7692749120D45A3500A3062A /* LuncherNetPlus */,
 				769274A720D45A3600A3062A /* LuncherNetPlusTests */,
-				769274B220D45A3600A3062A /* LuncherNetPlusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		769274A620D45A3600A3062A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		769274B120D45A3600A3062A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,14 +226,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		769274AF20D45A3600A3062A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				769274B820D45A3600A3062A /* LuncherNetPlusUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +233,6 @@
 			isa = PBXTargetDependency;
 			target = 7692749120D45A3500A3062A /* LuncherNetPlus */;
 			targetProxy = 769274A920D45A3600A3062A /* PBXContainerItemProxy */;
-		};
-		769274B520D45A3600A3062A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7692749120D45A3500A3062A /* LuncherNetPlus */;
-			targetProxy = 769274B420D45A3600A3062A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -504,44 +444,6 @@
 			};
 			name = Release;
 		};
-		769274C320D45A3600A3062A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LuncherNetPlusUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JPhipps.LuncherNetPlusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LuncherNetPlus;
-			};
-			name = Debug;
-		};
-		769274C420D45A3600A3062A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LuncherNetPlusUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JPhipps.LuncherNetPlusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LuncherNetPlus;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,15 +470,6 @@
 			buildConfigurations = (
 				769274C020D45A3600A3062A /* Debug */,
 				769274C120D45A3600A3062A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		769274C220D45A3600A3062A /* Build configuration list for PBXNativeTarget "LuncherNetPlusUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				769274C320D45A3600A3062A /* Debug */,
-				769274C420D45A3600A3062A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
