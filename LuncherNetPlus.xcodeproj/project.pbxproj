@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
-		7692749820D45A3500A3062A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749720D45A3500A3062A /* FirstViewController.swift */; };
-		7692749A20D45A3500A3062A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749920D45A3500A3062A /* SecondViewController.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
 		769274A220D45A3600A3062A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769274A020D45A3600A3062A /* LaunchScreen.storyboard */; };
 		769274AD20D45A3600A3062A /* LuncherNetPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769274AC20D45A3600A3062A /* LuncherNetPlusTests.swift */; };
+		76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */; };
+		76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FA20D81A1700CDE39B /* LoginViewController.swift */; };
+		76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */; };
+		76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FE20D81AD800CDE39B /* LunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +31,6 @@
 /* Begin PBXFileReference section */
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7692749720D45A3500A3062A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7692749920D45A3500A3062A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7692749C20D45A3500A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7692749E20D45A3600A3062A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		769274A120D45A3600A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,10 @@
 		769274AE20D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769274B720D45A3600A3062A /* LuncherNetPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuncherNetPlusUITests.swift; sourceTree = "<group>"; };
 		769274B920D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		76AE07FA20D81A1700CDE39B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroswerViewController.swift; sourceTree = "<group>"; };
+		76AE07FE20D81AD800CDE39B /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +86,12 @@
 		7692749420D45A3500A3062A /* LuncherNetPlus */ = {
 			isa = PBXGroup;
 			children = (
+				76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */,
 				7692749520D45A3500A3062A /* AppDelegate.swift */,
-				7692749720D45A3500A3062A /* FirstViewController.swift */,
-				7692749920D45A3500A3062A /* SecondViewController.swift */,
 				7692749B20D45A3500A3062A /* Main.storyboard */,
+				76AE07FE20D81AD800CDE39B /* LunchViewController.swift */,
+				76AE07FA20D81A1700CDE39B /* LoginViewController.swift */,
+				76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */,
 				7692749E20D45A3600A3062A /* Assets.xcassets */,
 				769274A020D45A3600A3062A /* LaunchScreen.storyboard */,
 				769274A320D45A3600A3062A /* Info.plist */,
@@ -212,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7692749A20D45A3500A3062A /* SecondViewController.swift in Sources */,
+				76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */,
+				76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */,
+				76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */,
 				7692749620D45A3500A3062A /* AppDelegate.swift in Sources */,
-				7692749820D45A3500A3062A /* FirstViewController.swift in Sources */,
+				76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
