@@ -276,6 +276,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W3R-Bg-waR"/>
                     </view>
+                    <connections>
+                        <outlet property="createAccountBtn" destination="gHg-tE-O06" id="fdi-F9-8VZ"/>
+                        <outlet property="nameField" destination="WOz-Zg-t8Z" id="tue-kl-m10"/>
+                        <outlet property="passwordField" destination="GeY-Kf-qsO" id="fVN-hW-XQE"/>
+                        <outlet property="usernameField" destination="Ik4-rk-lLS" id="QJM-6s-aKF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b0-PF-1Vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,6 +368,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Olf-Cr-nMJ"/>
+        <segue reference="e0A-Ri-Fpq"/>
     </inferredMetricsTieBreakers>
 </document>

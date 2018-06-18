@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2576213E347341F4802179 /* Pods_LuncherNetPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */; };
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
@@ -16,7 +17,8 @@
 		76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FA20D81A1700CDE39B /* LoginViewController.swift */; };
 		76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */; };
 		76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FE20D81AD800CDE39B /* LunchViewController.swift */; };
-		76AE080120D81C3800CDE39B /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 76AE080020D81C3800CDE39B /* GoogleService-Info (1).plist */; };
+		76AE080320D82BC300CDE39B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76AE080220D82BC300CDE39B /* GoogleService-Info.plist */; };
+		DFC750B74BC96AB0CB391126 /* Pods_LuncherNetPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDD42F04F63BF89494D75D /* Pods_LuncherNetPlus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.release.xcconfig"; sourceTree = "<group>"; };
+		595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7692749C20D45A3500A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +50,10 @@
 		76AE07FA20D81A1700CDE39B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroswerViewController.swift; sourceTree = "<group>"; };
 		76AE07FE20D81AD800CDE39B /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
-		76AE080020D81C3800CDE39B /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		76AE080220D82BC300CDE39B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4A0CF2624527E2B57F81B9B /* Pods-LuncherNetPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF067FA0F8301F8890EDA3F1 /* Pods-LuncherNetPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.release.xcconfig"; sourceTree = "<group>"; };
+		C8FDD42F04F63BF89494D75D /* Pods_LuncherNetPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC750B74BC96AB0CB391126 /* Pods_LuncherNetPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +69,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2576213E347341F4802179 /* Pods_LuncherNetPlusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29DFCEE1CEBCA92D77A70D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDD42F04F63BF89494D75D /* Pods_LuncherNetPlus.framework */,
+				2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FF2441353029D03EAB7B623 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */,
+				AF067FA0F8301F8890EDA3F1 /* Pods-LuncherNetPlus.release.xcconfig */,
+				A4A0CF2624527E2B57F81B9B /* Pods-LuncherNetPlusTests.debug.xcconfig */,
+				316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7692748920D45A3500A3062A = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +103,8 @@
 				769274AB20D45A3600A3062A /* LuncherNetPlusTests */,
 				769274B620D45A3600A3062A /* LuncherNetPlusUITests */,
 				7692749320D45A3500A3062A /* Products */,
+				3FF2441353029D03EAB7B623 /* Pods */,
+				29DFCEE1CEBCA92D77A70D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +128,7 @@
 				76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */,
 				7692749E20D45A3600A3062A /* Assets.xcassets */,
 				769274A020D45A3600A3062A /* LaunchScreen.storyboard */,
-				76AE080020D81C3800CDE39B /* GoogleService-Info (1).plist */,
+				76AE080220D82BC300CDE39B /* GoogleService-Info.plist */,
 				769274A320D45A3600A3062A /* Info.plist */,
 			);
 			path = LuncherNetPlus;
@@ -127,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 769274BC20D45A3600A3062A /* Build configuration list for PBXNativeTarget "LuncherNetPlus" */;
 			buildPhases = (
+				F11A17F0E3665C84EA6FD7D6 /* [CP] Check Pods Manifest.lock */,
 				7692748E20D45A3500A3062A /* Sources */,
 				7692748F20D45A3500A3062A /* Frameworks */,
 				7692749020D45A3500A3062A /* Resources */,
+				D7F7B1E94FFC85171915BC67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 769274BF20D45A3600A3062A /* Build configuration list for PBXNativeTarget "LuncherNetPlusTests" */;
 			buildPhases = (
+				7810B9B183DD6B43F0640954 /* [CP] Check Pods Manifest.lock */,
 				769274A420D45A3600A3062A /* Sources */,
 				769274A520D45A3600A3062A /* Frameworks */,
 				769274A620D45A3600A3062A /* Resources */,
@@ -202,9 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				769274A220D45A3600A3062A /* LaunchScreen.storyboard in Resources */,
+				76AE080320D82BC300CDE39B /* GoogleService-Info.plist in Resources */,
 				7692749F20D45A3600A3062A /* Assets.xcassets in Resources */,
 				7692749D20D45A3500A3062A /* Main.storyboard in Resources */,
-				76AE080120D81C3800CDE39B /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +251,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7810B9B183DD6B43F0640954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuncherNetPlusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F7B1E94FFC85171915BC67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11A17F0E3665C84EA6FD7D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuncherNetPlus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7692748E20D45A3500A3062A /* Sources */ = {
@@ -384,6 +478,7 @@
 		};
 		769274BD20D45A3600A3062A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,6 +496,7 @@
 		};
 		769274BE20D45A3600A3062A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF067FA0F8301F8890EDA3F1 /* Pods-LuncherNetPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,6 +514,7 @@
 		};
 		769274C020D45A3600A3062A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A0CF2624527E2B57F81B9B /* Pods-LuncherNetPlusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -438,6 +535,7 @@
 		};
 		769274C120D45A3600A3062A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -6,10 +6,16 @@
 //  Copyright © 2018 Jaylin Phipps. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class CreateAccountViewController: UIViewController {
 
+class CreateAccountViewController: UIViewController {
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var createAccountBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
