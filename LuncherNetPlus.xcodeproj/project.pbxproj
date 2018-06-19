@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B2576213E347341F4802179 /* Pods_LuncherNetPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */; };
+		7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642239D20D9927A0054038F /* NavigationViewController.swift */; };
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */; };
 		76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FE20D81AD800CDE39B /* LunchViewController.swift */; };
 		76AE080320D82BC300CDE39B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76AE080220D82BC300CDE39B /* GoogleService-Info.plist */; };
+		76BAAA5820D843FA00A72F15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BAAA5720D843FA00A72F15 /* MenuViewController.swift */; };
 		DFC750B74BC96AB0CB391126 /* Pods_LuncherNetPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDD42F04F63BF89494D75D /* Pods_LuncherNetPlus.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 		2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.release.xcconfig"; sourceTree = "<group>"; };
 		595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		7642239D20D9927A0054038F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7692749C20D45A3500A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroswerViewController.swift; sourceTree = "<group>"; };
 		76AE07FE20D81AD800CDE39B /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		76AE080220D82BC300CDE39B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76BAAA5720D843FA00A72F15 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A4A0CF2624527E2B57F81B9B /* Pods-LuncherNetPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF067FA0F8301F8890EDA3F1 /* Pods-LuncherNetPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.release.xcconfig"; sourceTree = "<group>"; };
 		C8FDD42F04F63BF89494D75D /* Pods_LuncherNetPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,7 @@
 				76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */,
 				7692749520D45A3500A3062A /* AppDelegate.swift */,
 				7692749B20D45A3500A3062A /* Main.storyboard */,
+				76BAAA5720D843FA00A72F15 /* MenuViewController.swift */,
 				76AE07FE20D81AD800CDE39B /* LunchViewController.swift */,
 				76AE07FA20D81A1700CDE39B /* LoginViewController.swift */,
 				76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */,
@@ -130,6 +135,7 @@
 				769274A020D45A3600A3062A /* LaunchScreen.storyboard */,
 				76AE080220D82BC300CDE39B /* GoogleService-Info.plist */,
 				769274A320D45A3600A3062A /* Info.plist */,
+				7642239D20D9927A0054038F /* NavigationViewController.swift */,
 			);
 			path = LuncherNetPlus;
 			sourceTree = "<group>";
@@ -278,11 +284,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -317,9 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */,
+				76BAAA5820D843FA00A72F15 /* MenuViewController.swift in Sources */,
 				76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */,
 				76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */,
 				7692749620D45A3500A3062A /* AppDelegate.swift in Sources */,
+				7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */,
 				76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

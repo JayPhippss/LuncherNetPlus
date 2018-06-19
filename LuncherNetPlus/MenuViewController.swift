@@ -1,5 +1,5 @@
 //
-//  LunchViewController.swift
+//  MenuViewController.swift
 //  LuncherNetPlus
 //
 //  Created by Jaylin Phipps on 6/18/18.
@@ -9,16 +9,16 @@
 import UIKit
 import Firebase
 
+class MenuViewController: UIViewController {
 
-class LunchViewController: UIViewController {
-    @IBOutlet weak var logoutBrn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-      
+          navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +26,13 @@ class LunchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let user = Auth.auth().currentUser {
+            self.performSegue(withIdentifier: "lunchScreen", sender: self)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -36,10 +43,5 @@ class LunchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func logout(_ sender: Any) {
-        try! Auth.auth().signOut()
-        self.navigationController?.popViewController(animated: false)
-        }
-    }
-    
 
+}

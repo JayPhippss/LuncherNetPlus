@@ -1,24 +1,20 @@
 //
-//  LunchViewController.swift
+//  NavigationViewController.swift
 //  LuncherNetPlus
 //
-//  Created by Jaylin Phipps on 6/18/18.
+//  Created by Jaylin Phipps on 6/19/18.
 //  Copyright © 2018 Jaylin Phipps. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
+class NavigationViewController: UINavigationController {
 
-class LunchViewController: UIViewController {
-    @IBOutlet weak var logoutBrn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-      
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +22,14 @@ class LunchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        if let user = Auth.auth().currentUser {
+//            self.performSegue(withIdentifier: "lunchScreen", sender: self)
+//        }
+//    }
+    
     /*
     // MARK: - Navigation
 
@@ -36,10 +39,5 @@ class LunchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func logout(_ sender: Any) {
-        try! Auth.auth().signOut()
-        self.navigationController?.popViewController(animated: false)
-        }
-    }
-    
 
+}
