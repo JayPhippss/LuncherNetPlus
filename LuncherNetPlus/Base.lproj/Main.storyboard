@@ -297,7 +297,6 @@
                         <outlet property="nameField" destination="ASZ-j6-MiK" id="Vuk-bR-lJC"/>
                         <outlet property="passwordField" destination="GeY-Kf-qsO" id="fVN-hW-XQE"/>
                         <outlet property="usernameField" destination="Ik4-rk-lLS" id="QJM-6s-aKF"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="lunchScreen1" id="rTw-6L-a6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b0-PF-1Vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -407,7 +406,4 @@
         <image name="loginBtns" width="293" height="34"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rTw-6L-a6f"/>
-    </inferredMetricsTieBreakers>
 </document>
