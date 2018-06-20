@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var emailBox: UITextField!
+    @IBOutlet weak var passwordBox: UITextField!
+    @IBOutlet weak var infoLbl: UILabel!
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +28,31 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginClick(_ sender: Any) {
+        logIn()
     }
-    */
+    
+    func logIn () {
+        guard let userEmail = emailBox.text else { return }
+        guard let userPass = passwordBox.text else { return }
+
+        if emailBox.text == nil || passwordBox.text == nil {
+            print("Fill out required text fields")
+            self.infoLbl.text = "Fill out all text fields or create an account"
+        } else  {
+            Auth.auth().signIn(withEmail: userEmail, password: userPass) { (user, error) in
+                if error == nil && user != nil {
+                    self.infoLbl.text = ("You have successfully logged in!")
+                    self.navigationController?.popViewController(animated: false)
+                } else {
+                    print("Error Logging in: \(error!.localizedDescription)")
+                    let alert = UIAlertController(title: "Error Logging in!", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+
+        }
+    }
 
 }

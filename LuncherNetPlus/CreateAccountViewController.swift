@@ -49,7 +49,12 @@ class CreateAccountViewController: UIViewController {
     */
     func createAccount() {
         if passwordField.text == "" || usernameField.text == "" || nameField.text == ""{
-            self.creationInfo.text = "Fill In All Fields"
+            
+            let fieldsAlert = UIAlertController(title: "Error Creating Account!", message: "Please fill in all the fields.", preferredStyle: .alert)
+            fieldsAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(fieldsAlert, animated: true)
+            
+            //self.creationInfo.text = "Fill In All Fields"
             print("Must fill in all text fields")
         } else {
             Auth.auth().createUser(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
@@ -57,7 +62,6 @@ class CreateAccountViewController: UIViewController {
                     self.creationInfo.text = "You Have Signed Up"
                     print("You are now signed up")
                 
-                    
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = self.nameField.text
                     changeRequest?.commitChanges(completion: { (error) in
@@ -71,9 +75,10 @@ class CreateAccountViewController: UIViewController {
                     })
                     
                 } else {
-                    
+                    let creationAlert = UIAlertController(title: "Error Creating Account!", message: error?.localizedDescription, preferredStyle: .alert)
+                    creationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(creationAlert, animated: true)
                     print(error)
-                    
                 }
             }
         }
