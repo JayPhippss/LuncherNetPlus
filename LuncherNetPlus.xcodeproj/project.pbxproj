@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B2576213E347341F4802179 /* Pods_LuncherNetPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */; };
+		760F7DAD20DAB16F00895C21 /* Dealers - Shaded.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAA20DAB16900895C21 /* Dealers - Shaded.otf */; };
+		760F7DAE20DAB16F00895C21 /* Dealers - Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */; };
+		760F7DAF20DAB16F00895C21 /* Dealers - Solid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */; };
 		7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642239D20D9927A0054038F /* NavigationViewController.swift */; };
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 		2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.release.xcconfig"; sourceTree = "<group>"; };
 		595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		760F7DAA20DAB16900895C21 /* Dealers - Shaded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Shaded.otf"; sourceTree = "<group>"; };
+		760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Shadow.otf"; sourceTree = "<group>"; };
+		760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Solid.otf"; sourceTree = "<group>"; };
 		7642239D20D9927A0054038F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		760F7DA920DAB14C00895C21 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				760F7DAA20DAB16900895C21 /* Dealers - Shaded.otf */,
+				760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */,
+				760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7692748920D45A3500A3062A = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +152,7 @@
 				76AE080220D82BC300CDE39B /* GoogleService-Info.plist */,
 				769274A320D45A3600A3062A /* Info.plist */,
 				7642239D20D9927A0054038F /* NavigationViewController.swift */,
+				760F7DA920DAB14C00895C21 /* Fonts */,
 			);
 			path = LuncherNetPlus;
 			sourceTree = "<group>";
@@ -242,7 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				760F7DAE20DAB16F00895C21 /* Dealers - Shadow.otf in Resources */,
 				769274A220D45A3600A3062A /* LaunchScreen.storyboard in Resources */,
+				760F7DAD20DAB16F00895C21 /* Dealers - Shaded.otf in Resources */,
+				760F7DAF20DAB16F00895C21 /* Dealers - Solid.otf in Resources */,
 				76AE080320D82BC300CDE39B /* GoogleService-Info.plist in Resources */,
 				7692749F20D45A3600A3062A /* Assets.xcassets in Resources */,
 				7692749D20D45A3500A3062A /* Main.storyboard in Resources */,

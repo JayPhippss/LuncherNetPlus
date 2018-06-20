@@ -51,5 +51,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Dealers - Shaded.otf</string>
+		<string>Dealers - Shadow.otf</string>
+		<string>Dealers - Solid.otf</string>
+	</array>
 </dict>
 </plist>

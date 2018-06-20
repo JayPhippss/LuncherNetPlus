@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="2an-QZ-FhR" userLabel="logoImg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuncherNetLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2an-QZ-FhR" userLabel="logoImg">
                                 <rect key="frame" x="41" y="250" width="292" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -37,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group" width="275" height="266"/>
+        <image name="LuncherNetLogo" width="274" height="267"/>
         <image name="iPhoneX Launch Screen" width="375" height="812"/>
     </resources>
 </document>

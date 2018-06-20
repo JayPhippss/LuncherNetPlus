@@ -12,13 +12,15 @@ import Firebase
 
 class LunchViewController: UIViewController {
     @IBOutlet weak var logoutBrn: UIButton!
+    @IBOutlet weak var viewLeading: NSLayoutConstraint!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var sideView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       viewLeading.constant = -175
         
-      
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +28,22 @@ class LunchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let tranlation = sender.translation(in: self.view).x
+            
+            if tranlation > 0 { //swipe right
+                
+                if viewLeading.constant < 20 {
+                   self.viewLeading.constant += tranlation
+                }
+            } else { //swipe left
+                
+            }
+        } else if sender.state == .ended {
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -38,7 +55,7 @@ class LunchViewController: UIViewController {
     */
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
-        self.navigationController?.popViewController(animated: false)
+        self.dismiss(animated: true, completion: nil)
         }
     }
     
