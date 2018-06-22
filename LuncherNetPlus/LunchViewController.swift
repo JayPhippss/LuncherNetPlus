@@ -10,16 +10,28 @@ import UIKit
 import Firebase
 
 
-class LunchViewController: UIViewController {
+class LunchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     @IBOutlet weak var logoutBrn: UIButton!
     @IBOutlet weak var viewLeading: NSLayoutConstraint!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var sideView: UIView!
     
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var restaurantsNames = [Restaurant]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        viewLeading.constant = -175
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        
+        collectionView.dataSource = self
+        
+        makeGetCall()
         
     }
 
@@ -28,6 +40,68 @@ class LunchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! LunchCollectionViewCell
+        
+        cell.restNameLbl.text = restaurantsNames[indexPath[0]].name.capitalized
+        cell.catNameLbl.text = restaurantsNames[indexPath[0]].category.capitalized
+        cell.lunchImgView.contentMode = .scaleAspectFill
+        let urlImg = restaurantsNames[indexPath[0]].backgroundImageURL
+        cell.lunchImgView.downloadedFrom(url: urlImg)
+        
+        return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return restaurantsNames.count
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
+//        desVC.restN = restaurantsNames[indexPath[0]].name.capitalized
+//        desVC.catN = restaurantsNames[indexPath[0]].category.capitalized
+//
+//        desVC.addyN = (restaurantsNames[indexPath[0]].location?.address)!
+//        desVC.cityN = (restaurantsNames[indexPath[0]].location?.city)!
+//        desVC.stateN = (restaurantsNames[indexPath[0]].location?.state)!
+//
+//        if (restaurantsNames[indexPath[0]].location?.postalCode == nil){
+//            desVC.zipC = ""
+//        } else {
+//            desVC.zipC = (restaurantsNames[indexPath[0]].location?.postalCode)!
+//        }
+//
+//        if (restaurantsNames[indexPath[0]].contact?.formattedPhone == nil){
+//            desVC.phoneN = ""
+//        } else {
+//            desVC.phoneN = (restaurantsNames[indexPath[0]].contact?.formattedPhone)!
+//        }
+//
+//        if (restaurantsNames[indexPath[0]].contact?.twitter == nil){
+//            desVC.twitH = ""
+//        } else {
+//            let twitAt: String? = "@"
+//            desVC.twitH = (twitAt! + (restaurantsNames[indexPath[0]].contact?.twitter)!)
+//        }
+//
+//        desVC.cordLat = (restaurantsNames[indexPath[0]].location?.lat)!
+//        desVC.cordLong = (restaurantsNames[indexPath[0]].location?.lng)!
+//
+//
+//        self.navigationController?.pushViewController(desVC, animated: true)
+//    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let tranlation = sender.translation(in: self.view).x
@@ -35,28 +109,82 @@ class LunchViewController: UIViewController {
             if tranlation > 0 { //swipe right
                 
                 if viewLeading.constant < 20 {
-                   self.viewLeading.constant += tranlation
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewLeading.constant += tranlation / 10
+                        self.view.layoutIfNeeded()
+                    })
                 }
             } else { //swipe left
-                
+                if viewLeading.constant > -175 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewLeading.constant += tranlation / 10
+                        self.view.layoutIfNeeded()
+                    })
+                }
             }
         } else if sender.state == .ended {
             
+            if viewLeading.constant < -100 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viewLeading.constant = -175
+                    self.view.layoutIfNeeded()
+                })
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viewLeading.constant = 0
+                    self.view.layoutIfNeeded()
+                })
+            }
+            
         }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: true, completion: nil)
         }
-    }
     
+    
+    //URL Session
+    func makeGetCall(){
+        let restaurantEndPoint: String = "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/restaurants.json"
+        guard let url = URL(string: restaurantEndPoint) else {
+            print("Error: Cannot create URL")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: urlRequest){
+            (data, response, error) in
+            
+            guard error == nil else {
+                print("error getting restaurants")
+                print(error!)
+                return
+            }
+            
+            
+            do{
+                
+                let restaurantsData = try JSONDecoder().decode(RestaurantList.self, from: data!)
+                //return the number of restaurants print(restaurantsData.restaurants.count)
+                self.restaurantsNames = restaurantsData.restaurants
+                print(restaurantsData.restaurants.count)
+            } catch {
+                print(error)
+            }
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
+            
+        }
+        task.resume()
+    }
+}
+
+
 

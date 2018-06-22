@@ -17,6 +17,10 @@
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
 		769274A220D45A3600A3062A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769274A020D45A3600A3062A /* LaunchScreen.storyboard */; };
 		769274AD20D45A3600A3062A /* LuncherNetPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769274AC20D45A3600A3062A /* LuncherNetPlusTests.swift */; };
+		76A7BF3820DD4FBD00C50516 /* LunchCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7BF3720DD4FBD00C50516 /* LunchCollectionView.swift */; };
+		76A7BF3B20DD51EC00C50516 /* RestaurantLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7BF3A20DD51EC00C50516 /* RestaurantLists.swift */; };
+		76A7BF3E20DD522800C50516 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7BF3D20DD522800C50516 /* ImageHandler.swift */; };
+		76A7BF4120DD528B00C50516 /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7BF4020DD528B00C50516 /* JSONHandler.swift */; };
 		76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */; };
 		76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FA20D81A1700CDE39B /* LoginViewController.swift */; };
 		76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */; };
@@ -55,6 +59,10 @@
 		769274AE20D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769274B720D45A3600A3062A /* LuncherNetPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuncherNetPlusUITests.swift; sourceTree = "<group>"; };
 		769274B920D45A3600A3062A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A7BF3720DD4FBD00C50516 /* LunchCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchCollectionView.swift; sourceTree = "<group>"; };
+		76A7BF3A20DD51EC00C50516 /* RestaurantLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantLists.swift; sourceTree = "<group>"; };
+		76A7BF3D20DD522800C50516 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		76A7BF4020DD528B00C50516 /* JSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHandler.swift; sourceTree = "<group>"; };
 		76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		76AE07FA20D81A1700CDE39B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroswerViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +148,9 @@
 		7692749420D45A3500A3062A /* LuncherNetPlus */ = {
 			isa = PBXGroup;
 			children = (
+				76A7BF3F20DD527C00C50516 /* JSON Handler */,
+				76A7BF3C20DD521700C50516 /* ImageHandler */,
+				76A7BF3920DD51D700C50516 /* Models */,
 				76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */,
 				7692749520D45A3500A3062A /* AppDelegate.swift */,
 				7692749B20D45A3500A3062A /* Main.storyboard */,
@@ -152,6 +163,7 @@
 				76AE080220D82BC300CDE39B /* GoogleService-Info.plist */,
 				769274A320D45A3600A3062A /* Info.plist */,
 				7642239D20D9927A0054038F /* NavigationViewController.swift */,
+				76A7BF3720DD4FBD00C50516 /* LunchCollectionView.swift */,
 				760F7DA920DAB14C00895C21 /* Fonts */,
 			);
 			path = LuncherNetPlus;
@@ -173,6 +185,30 @@
 				769274B920D45A3600A3062A /* Info.plist */,
 			);
 			path = LuncherNetPlusUITests;
+			sourceTree = "<group>";
+		};
+		76A7BF3920DD51D700C50516 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76A7BF3A20DD51EC00C50516 /* RestaurantLists.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76A7BF3C20DD521700C50516 /* ImageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				76A7BF3D20DD522800C50516 /* ImageHandler.swift */,
+			);
+			path = ImageHandler;
+			sourceTree = "<group>";
+		};
+		76A7BF3F20DD527C00C50516 /* JSON Handler */ = {
+			isa = PBXGroup;
+			children = (
+				76A7BF4020DD528B00C50516 /* JSONHandler.swift */,
+			);
+			path = "JSON Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A7BF3E20DD522800C50516 /* ImageHandler.swift in Sources */,
+				76A7BF3B20DD51EC00C50516 /* RestaurantLists.swift in Sources */,
 				76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */,
 				76BAAA5820D843FA00A72F15 /* MenuViewController.swift in Sources */,
 				76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */,
+				76A7BF4120DD528B00C50516 /* JSONHandler.swift in Sources */,
 				76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */,
 				7692749620D45A3500A3062A /* AppDelegate.swift in Sources */,
+				76A7BF3820DD4FBD00C50516 /* LunchCollectionView.swift in Sources */,
 				7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */,
 				76AE07FB20D81A1700CDE39B /* LoginViewController.swift in Sources */,
 			);
