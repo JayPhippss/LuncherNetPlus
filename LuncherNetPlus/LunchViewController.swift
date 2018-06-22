@@ -33,6 +33,9 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         makeGetCall()
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,23 +44,19 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return restaurantsNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! LunchCollectionViewCell
         
-        cell.restNameLbl.text = restaurantsNames[indexPath[0]].name.capitalized
-        cell.catNameLbl.text = restaurantsNames[indexPath[0]].category.capitalized
+        cell.restNameLbl.text = restaurantsNames[indexPath.row].name.capitalized
+        cell.catNameLbl.text = restaurantsNames[indexPath.row].category.capitalized
         cell.lunchImgView.contentMode = .scaleAspectFill
-        let urlImg = restaurantsNames[indexPath[0]].backgroundImageURL
+        let urlImg = restaurantsNames[indexPath.row].backgroundImageURL
         cell.lunchImgView.downloadedFrom(url: urlImg)
         
         return cell
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return restaurantsNames.count
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

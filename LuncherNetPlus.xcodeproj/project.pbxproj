@@ -12,6 +12,7 @@
 		760F7DAE20DAB16F00895C21 /* Dealers - Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */; };
 		760F7DAF20DAB16F00895C21 /* Dealers - Solid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */; };
 		7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642239D20D9927A0054038F /* NavigationViewController.swift */; };
+		765C61E120DD893500945784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765C61E020DD893500945784 /* MapViewController.swift */; };
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Shadow.otf"; sourceTree = "<group>"; };
 		760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Solid.otf"; sourceTree = "<group>"; };
 		7642239D20D9927A0054038F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		765C61E020DD893500945784 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7692749C20D45A3500A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		765C61DF20DD890000945784 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				765C61E020DD893500945784 /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		7692748920D45A3500A3062A = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 		7692749420D45A3500A3062A /* LuncherNetPlus */ = {
 			isa = PBXGroup;
 			children = (
+				765C61DF20DD890000945784 /* View Controllers */,
 				76A7BF3F20DD527C00C50516 /* JSON Handler */,
 				76A7BF3C20DD521700C50516 /* ImageHandler */,
 				76A7BF3920DD51D700C50516 /* Models */,
@@ -387,6 +398,7 @@
 				76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */,
 				76A7BF4120DD528B00C50516 /* JSONHandler.swift in Sources */,
 				76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */,
+				765C61E120DD893500945784 /* MapViewController.swift in Sources */,
 				7692749620D45A3500A3062A /* AppDelegate.swift in Sources */,
 				76A7BF3820DD4FBD00C50516 /* LunchCollectionView.swift in Sources */,
 				7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */,

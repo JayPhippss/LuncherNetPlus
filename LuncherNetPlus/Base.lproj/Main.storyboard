@@ -19,20 +19,31 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="luZ-HA-jDO">
             <objects>
-                <viewController id="jDx-DE-8I0" sceneMemberID="viewController">
+                <viewController id="jDx-DE-8I0" customClass="MapViewController" customModule="LuncherNetPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YA-6c-OnH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4TN-Kg-Xfq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Cy-gx-Sdw" firstAttribute="bottom" secondItem="4TN-Kg-Xfq" secondAttribute="bottom" id="24Z-4E-LVg"/>
+                            <constraint firstItem="3Cy-gx-Sdw" firstAttribute="trailing" secondItem="4TN-Kg-Xfq" secondAttribute="trailing" id="Gih-1n-TIZ"/>
+                            <constraint firstItem="4TN-Kg-Xfq" firstAttribute="top" secondItem="3Cy-gx-Sdw" secondAttribute="top" constant="-88" id="kSO-by-EOA"/>
+                            <constraint firstItem="4TN-Kg-Xfq" firstAttribute="leading" secondItem="3Cy-gx-Sdw" secondAttribute="leading" id="xih-xu-abV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3Cy-gx-Sdw"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCr-0l-trL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3574" y="-321"/>
+            <point key="canvasLocation" x="3573.5999999999999" y="-321.42857142857144"/>
         </scene>
         <!--LuncherNet-->
         <scene sceneID="hNz-n2-bh7">
@@ -46,33 +57,33 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jZn-lR-OXi">
-                                    <size key="itemSize" width="160" height="150"/>
+                                    <size key="itemSize" width="170" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="p47-qk-gca" customClass="LunchCollectionViewCell" customModule="LuncherNetPlus" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="160" height="150"/>
+                                        <rect key="frame" x="10" y="10" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wJu-XG-maV" userLabel="lunchBackgroundIMG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184.33333333333334" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellGradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7Es-M6-Aga">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184.33333333333334" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-PH-gRC" userLabel="restNameLbl">
-                                                    <rect key="frame" x="8" y="101" width="168.33333333333334" height="17"/>
+                                                    <rect key="frame" x="8" y="101" width="154" height="17"/>
                                                     <fontDescription key="fontDescription" name="DealersSolid" family="Dealers Solid" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVN-Tc-mp2" userLabel="catNameLbl">
-                                                    <rect key="frame" x="8" y="124" width="168.33333333333334" height="15"/>
+                                                    <rect key="frame" x="8" y="124" width="154" height="15"/>
                                                     <fontDescription key="fontDescription" name="DealersSolid" family="Dealers Solid" pointSize="15"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -95,7 +106,7 @@
                                             <constraint firstItem="wJu-XG-maV" firstAttribute="leading" secondItem="p47-qk-gca" secondAttribute="leading" id="kSF-jy-RTL"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="VVN-Tc-mp2" secondAttribute="trailing" id="qQG-Un-sKV"/>
                                         </constraints>
-                                        <size key="customSize" width="160" height="150"/>
+                                        <size key="customSize" width="170" height="170"/>
                                         <connections>
                                             <outlet property="catNameLbl" destination="VVN-Tc-mp2" id="ENr-Vi-3pt"/>
                                             <outlet property="lunchImgView" destination="wJu-XG-maV" id="q5p-xH-PM5"/>
@@ -154,7 +165,7 @@
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="kvf-SY-JW9" firstAttribute="centerY" secondItem="Qjm-d6-Jx7" secondAttribute="centerY" id="DIJ-ar-4aC"/>
                                     <constraint firstAttribute="width" constant="175" id="Hpr-n4-acU"/>
@@ -164,7 +175,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.094117647060000004" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Qjm-d6-Jx7" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="3Uw-al-RcC"/>
@@ -523,7 +534,7 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.63137254901960782" green="0.094117647058823528" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="cyN-yf-U5S" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
