@@ -209,7 +209,6 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             }
             
         }
-        print(restaurantCat.count)
     }
 }
 
