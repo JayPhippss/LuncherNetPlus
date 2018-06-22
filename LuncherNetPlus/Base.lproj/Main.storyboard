@@ -152,12 +152,23 @@
                                                         <segue destination="jDx-DE-8I0" kind="show" id="u43-oe-pxj"/>
                                                     </connections>
                                                 </button>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNZ-u9-igu">
+                                                    <rect key="frame" x="0.0" y="100" width="175" height="541"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="9pv-A4-QxB" id="ptf-Ws-Ij8"/>
+                                                        <outlet property="delegate" destination="9pv-A4-QxB" id="9ar-oc-AEu"/>
+                                                    </connections>
+                                                </pickerView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5f4-hb-gYk" secondAttribute="trailing" constant="10" id="1MZ-RK-ZBq"/>
                                                 <constraint firstItem="Qol-sW-Sgd" firstAttribute="leading" secondItem="Gbg-aO-ksQ" secondAttribute="leading" constant="10" id="3PW-ZY-5N5"/>
+                                                <constraint firstItem="DNZ-u9-igu" firstAttribute="leading" secondItem="Gbg-aO-ksQ" secondAttribute="leading" id="5Ho-Kd-d4y"/>
+                                                <constraint firstItem="DNZ-u9-igu" firstAttribute="top" secondItem="Qol-sW-Sgd" secondAttribute="bottom" id="ChK-TL-wVW"/>
                                                 <constraint firstItem="5f4-hb-gYk" firstAttribute="top" secondItem="Gbg-aO-ksQ" secondAttribute="top" constant="10" id="EZD-2w-URG"/>
                                                 <constraint firstItem="Qol-sW-Sgd" firstAttribute="top" secondItem="5f4-hb-gYk" secondAttribute="bottom" constant="10" id="Na8-5x-gnK"/>
+                                                <constraint firstAttribute="trailing" secondItem="DNZ-u9-igu" secondAttribute="trailing" id="gpy-EE-sm3"/>
+                                                <constraint firstAttribute="bottom" secondItem="DNZ-u9-igu" secondAttribute="bottom" id="kHU-v7-Efr"/>
                                                 <constraint firstAttribute="trailing" secondItem="Qol-sW-Sgd" secondAttribute="trailing" constant="10" id="mBq-xD-oLv"/>
                                                 <constraint firstItem="5f4-hb-gYk" firstAttribute="leading" secondItem="Gbg-aO-ksQ" secondAttribute="leading" constant="10" id="u3v-m6-3oZ"/>
                                             </constraints>
@@ -194,6 +205,7 @@
                     <navigationItem key="navigationItem" title="LuncherNet" id="FxZ-br-xyW"/>
                     <connections>
                         <outlet property="blurView" destination="kvf-SY-JW9" id="8YF-6l-lal"/>
+                        <outlet property="catPicker" destination="DNZ-u9-igu" id="91o-hF-xH4"/>
                         <outlet property="collectionView" destination="70z-rQ-8O6" id="7kf-V2-5ji"/>
                         <outlet property="logoutBrn" destination="5f4-hb-gYk" id="FND-aF-rkL"/>
                         <outlet property="sideView" destination="Qjm-d6-Jx7" id="vUP-CM-gWj"/>

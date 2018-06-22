@@ -10,18 +10,20 @@ import UIKit
 import Firebase
 
 
-class LunchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class LunchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var logoutBrn: UIButton!
     @IBOutlet weak var viewLeading: NSLayoutConstraint!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var sideView: UIView!
     
+    @IBOutlet weak var catPicker: UIPickerView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var restaurantsNames = [Restaurant]()
-    
+    var restaurantCat = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -95,6 +97,21 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
 //        self.navigationController?.pushViewController(desVC, animated: true)
 //    }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return restaurantCat.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return restaurantCat[row]
+    }
+
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        <#code#>
+//    }
     
     
     
@@ -172,7 +189,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 let restaurantsData = try JSONDecoder().decode(RestaurantList.self, from: data!)
                 //return the number of restaurants print(restaurantsData.restaurants.count)
                 self.restaurantsNames = restaurantsData.restaurants
-                print(restaurantsData.restaurants.count)
+                self.goThroughCat()
             } catch {
                 print(error)
             }
@@ -182,6 +199,17 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             
         }
         task.resume()
+    }
+    
+    func goThroughCat (){
+        for restCat in restaurantsNames {
+            let currentCat = restCat.category
+            if restaurantCat.contains(currentCat) == false{
+                restaurantCat.append(currentCat)
+            }
+            
+        }
+        print(restaurantCat.count)
     }
 }
 

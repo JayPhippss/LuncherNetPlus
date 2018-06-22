@@ -19,6 +19,7 @@ struct Restaurant: Decodable {
     let category: String
     let contact: Contact?
     let location: Location?
+//    let classification: Catgory
     
 }
 
@@ -44,3 +45,19 @@ struct Location: Decodable{
 struct FormattedAddress: Decodable {
     let formattedAddress: String?
 }
+
+//enum Catgory: String {
+//    case Burgers
+//    case Seafood
+//    case TapHouse
+//    case WingJoint
+//    case Japanese
+//    case Mexican
+//    case BarAndGrill
+//    case TexMex
+//    case PreparedEats
+//    case Pub
+//    case CoffeeAndBreakfast
+//    case Thai
+//    case FastFoodBurgers
+//}
