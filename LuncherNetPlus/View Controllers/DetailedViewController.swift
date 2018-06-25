@@ -16,8 +16,10 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var stateLbl: UILabel!
     @IBOutlet weak var zipcodeLbl: UILabel!
-    @IBOutlet weak var phoneNumberLbl: UILabel!
     @IBOutlet weak var twitterLbl: UILabel!
+    @IBOutlet weak var phoneNumberLbl: UILabel!
+    
+    @IBOutlet weak var phoneTextView: UITextView!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -37,6 +39,7 @@ class DetailedViewController: UIViewController {
         zipcodeLbl.text! = zip
         phoneNumberLbl.text! = phoneNum
         twitterLbl.text! = twitter
+        phoneTextView.text! =  phoneNum
     }
 
     override func didReceiveMemoryWarning() {

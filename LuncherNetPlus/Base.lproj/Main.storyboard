@@ -342,14 +342,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr9-Gc-2kQ" userLabel="phoneNumber">
-                                <rect key="frame" x="8" y="576" width="359" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsY-nH-hLB" userLabel="twitterHandle">
+                                <rect key="frame" x="8" y="649" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsY-nH-hLB" userLabel="twitterHandle">
-                                <rect key="frame" x="8" y="649" width="359" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="773-701-0492" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-Yz-eoo">
+                                <rect key="frame" x="78" y="684" width="177" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osO-9q-NZZ" userLabel="phoneNumber">
+                                <rect key="frame" x="8" y="589" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -358,19 +366,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LOF-Wi-ytn" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="19S-fn-5l6"/>
-                            <constraint firstItem="fr9-Gc-2kQ" firstAttribute="top" secondItem="ub2-0L-UvW" secondAttribute="bottom" constant="36" id="2y9-m5-VVV"/>
                             <constraint firstItem="7j6-iO-FIx" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="3TN-17-AdG"/>
                             <constraint firstItem="KsY-nH-hLB" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="5Eu-Py-cKC"/>
+                            <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="osO-9q-NZZ" secondAttribute="trailing" constant="8" id="5vH-YQ-iSv"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="P5B-jM-2lY" secondAttribute="trailing" id="6P4-Mf-vDC"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="LOF-Wi-ytn" secondAttribute="trailing" constant="8" id="9Ve-Vg-8ip"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="BwK-9s-BC4" secondAttribute="trailing" constant="8" id="9bM-FV-9q0"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="KsY-nH-hLB" secondAttribute="trailing" constant="8" id="9sD-oj-Mvm"/>
+                            <constraint firstItem="osO-9q-NZZ" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="A3Z-8k-gKO"/>
                             <constraint firstItem="7j6-iO-FIx" firstAttribute="top" secondItem="P5B-jM-2lY" secondAttribute="bottom" constant="8" id="AI4-x6-P8e"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="T6H-Ki-BtP" secondAttribute="trailing" constant="8" id="Dgg-oH-iYF"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="ub2-0L-UvW" secondAttribute="trailing" constant="8" id="Ksw-tF-Ciy"/>
                             <constraint firstItem="RMk-Sw-OCc" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="LV3-m3-seT"/>
+                            <constraint firstItem="KsY-nH-hLB" firstAttribute="top" secondItem="osO-9q-NZZ" secondAttribute="bottom" constant="39" id="N2W-UZ-HBs"/>
                             <constraint firstItem="RMk-Sw-OCc" firstAttribute="top" secondItem="LOF-Wi-ytn" secondAttribute="bottom" constant="8" id="NA2-uf-Iv4"/>
-                            <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="fr9-Gc-2kQ" secondAttribute="trailing" constant="8" id="Ndf-u6-iaS"/>
                             <constraint firstItem="ub2-0L-UvW" firstAttribute="top" secondItem="RMk-Sw-OCc" secondAttribute="bottom" constant="8" id="PNs-GW-0ER"/>
                             <constraint firstItem="LOF-Wi-ytn" firstAttribute="top" secondItem="T6H-Ki-BtP" secondAttribute="bottom" constant="8" id="QIQ-EZ-SZM"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="RMk-Sw-OCc" secondAttribute="trailing" constant="8" id="TLU-aD-KC9"/>
@@ -378,15 +387,14 @@
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="7j6-iO-FIx" secondAttribute="trailing" constant="8" id="XbX-yr-OPa"/>
                             <constraint firstItem="T6H-Ki-BtP" firstAttribute="top" secondItem="BwK-9s-BC4" secondAttribute="bottom" constant="50" id="cfF-2X-mmS"/>
                             <constraint firstItem="P5B-jM-2lY" firstAttribute="top" secondItem="Fig-RE-0QZ" secondAttribute="top" id="dd5-VM-KBW"/>
-                            <constraint firstItem="fr9-Gc-2kQ" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="e83-vf-934"/>
                             <constraint firstItem="RMk-Sw-OCc" firstAttribute="top" secondItem="LOF-Wi-ytn" secondAttribute="bottom" constant="8" id="eFZ-QB-xOe"/>
                             <constraint firstItem="ub2-0L-UvW" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="lo2-QU-v7g"/>
                             <constraint firstItem="LOF-Wi-ytn" firstAttribute="top" secondItem="T6H-Ki-BtP" secondAttribute="bottom" constant="8" id="mfE-VG-SeJ"/>
                             <constraint firstItem="BwK-9s-BC4" firstAttribute="top" secondItem="7j6-iO-FIx" secondAttribute="bottom" constant="8" symbolic="YES" id="pN7-tV-cTp"/>
                             <constraint firstItem="ub2-0L-UvW" firstAttribute="top" secondItem="RMk-Sw-OCc" secondAttribute="bottom" constant="8" id="piu-Kw-lPf"/>
                             <constraint firstItem="P5B-jM-2lY" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" id="ueb-JW-5fn"/>
+                            <constraint firstItem="osO-9q-NZZ" firstAttribute="top" secondItem="ub2-0L-UvW" secondAttribute="bottom" constant="49" id="wP0-EK-exW"/>
                             <constraint firstItem="T6H-Ki-BtP" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="xOr-ju-iVk"/>
-                            <constraint firstItem="KsY-nH-hLB" firstAttribute="top" secondItem="fr9-Gc-2kQ" secondAttribute="bottom" constant="52" id="yKv-fx-EHc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fqo-0A-DOT"/>
                     </view>
@@ -395,7 +403,8 @@
                         <outlet property="catNameLbl" destination="BwK-9s-BC4" id="ggf-5d-grH"/>
                         <outlet property="cityLbl" destination="LOF-Wi-ytn" id="3cN-hu-MDx"/>
                         <outlet property="mapView" destination="P5B-jM-2lY" id="P1o-XI-JeV"/>
-                        <outlet property="phoneNumberLbl" destination="fr9-Gc-2kQ" id="D9M-Lj-gb2"/>
+                        <outlet property="phoneNumberLbl" destination="osO-9q-NZZ" id="0Fw-V6-j02"/>
+                        <outlet property="phoneTextView" destination="nXO-Yz-eoo" id="y5u-Qt-2HH"/>
                         <outlet property="restNameLbl" destination="7j6-iO-FIx" id="5Uj-Su-WqB"/>
                         <outlet property="stateLbl" destination="RMk-Sw-OCc" id="JSx-NV-ciZ"/>
                         <outlet property="twitterLbl" destination="KsY-nH-hLB" id="1po-0f-FNp"/>
