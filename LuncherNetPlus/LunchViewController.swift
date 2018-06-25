@@ -18,12 +18,15 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var sideView: UIView!
     
     @IBOutlet weak var catPicker: UIPickerView!
+    @IBOutlet weak var catPicketBtn: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var restaurantsNames = [Restaurant]()
     var restaurantCat = [String]()
+    var filterArray = [Restaurant]()
     
+    var currentPick = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +50,27 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return restaurantsNames.count
+//        return restaurantsNames.count
+        return filterArray.count
+        //temp array with filter on btn click update array and then reload collection view
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! LunchCollectionViewCell
         
-        cell.restNameLbl.text = restaurantsNames[indexPath.row].name.capitalized
-        cell.catNameLbl.text = restaurantsNames[indexPath.row].category.capitalized
-        cell.lunchImgView.contentMode = .scaleAspectFill
-        let urlImg = restaurantsNames[indexPath.row].backgroundImageURL
-        cell.lunchImgView.downloadedFrom(url: urlImg)
+                cell.restNameLbl.text = filterArray[indexPath.row].name.capitalized
+                cell.catNameLbl.text = filterArray[indexPath.row].category.capitalized
+                cell.lunchImgView.contentMode = .scaleAspectFill
+                let urlImg = filterArray[indexPath.row].backgroundImageURL
+                cell.lunchImgView.downloadedFrom(url: urlImg)
+        
+        
+//        cell.restNameLbl.text = restaurantsNames[indexPath.row].name.capitalized
+//        cell.catNameLbl.text = restaurantsNames[indexPath.row].category.capitalized
+//        cell.lunchImgView.contentMode = .scaleAspectFill
+//        let urlImg = restaurantsNames[indexPath.row].backgroundImageURL
+//        cell.lunchImgView.downloadedFrom(url: urlImg)
         
         return cell
     }
@@ -65,37 +78,73 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
-        desVC.restName = restaurantsNames[indexPath.row].name.capitalized
-        desVC.catName = restaurantsNames[indexPath.row].category.capitalized
-
-        desVC.address = (restaurantsNames[indexPath.row].location?.address)!
-        desVC.city = (restaurantsNames[indexPath.row].location?.city)!
-        desVC.state = (restaurantsNames[indexPath.row].location?.state)!
-
-        if (restaurantsNames[indexPath.row].location?.postalCode == nil){
+        
+        desVC.restName = filterArray[indexPath.row].name.capitalized
+        desVC.catName = filterArray[indexPath.row].category.capitalized
+        
+        desVC.address = (filterArray[indexPath.row].location?.address)!
+        desVC.city = (filterArray[indexPath.row].location?.city)!
+        desVC.state = (filterArray[indexPath.row].location?.state)!
+        
+        if (filterArray[indexPath.row].location?.postalCode == nil){
             desVC.zip = ""
         } else {
-            desVC.zip = (restaurantsNames[indexPath.row].location?.postalCode)!
+            desVC.zip = (filterArray[indexPath.row].location?.postalCode)!
         }
-
-        if (restaurantsNames[indexPath.row].contact?.formattedPhone == nil){
+        
+        if (filterArray[indexPath.row].contact?.formattedPhone == nil){
             desVC.phoneNum = ""
         } else {
-            desVC.phoneNum = (restaurantsNames[indexPath.row].contact?.formattedPhone)!
+            desVC.phoneNum = (filterArray[indexPath.row].contact?.formattedPhone)!
         }
-
-        if (restaurantsNames[indexPath.row].contact?.twitter == nil){
+        
+        if (filterArray[indexPath.row].contact?.twitter == nil){
             desVC.twitter = ""
         } else {
             let twitAt: String? = "@"
-            desVC.twitter = (twitAt! + (restaurantsNames[indexPath.row].contact?.twitter)!)
+            desVC.twitter = (twitAt! + (filterArray[indexPath.row].contact?.twitter)!)
         }
-
-        desVC.cordLat = (restaurantsNames[indexPath.row].location?.lat)!
-        desVC.cordLong = (restaurantsNames[indexPath.row].location?.lng)!
-
-
+        
+        desVC.cordLat = (filterArray[indexPath.row].location?.lat)!
+        desVC.cordLong = (filterArray[indexPath.row].location?.lng)!
+        
+        
         self.navigationController?.pushViewController(desVC, animated: true)
+        
+        
+        
+        
+//        desVC.restName = restaurantsNames[indexPath.row].name.capitalized
+//        desVC.catName = restaurantsNames[indexPath.row].category.capitalized
+//
+//        desVC.address = (restaurantsNames[indexPath.row].location?.address)!
+//        desVC.city = (restaurantsNames[indexPath.row].location?.city)!
+//        desVC.state = (restaurantsNames[indexPath.row].location?.state)!
+//
+//        if (restaurantsNames[indexPath.row].location?.postalCode == nil){
+//            desVC.zip = ""
+//        } else {
+//            desVC.zip = (restaurantsNames[indexPath.row].location?.postalCode)!
+//        }
+//
+//        if (restaurantsNames[indexPath.row].contact?.formattedPhone == nil){
+//            desVC.phoneNum = ""
+//        } else {
+//            desVC.phoneNum = (restaurantsNames[indexPath.row].contact?.formattedPhone)!
+//        }
+//
+//        if (restaurantsNames[indexPath.row].contact?.twitter == nil){
+//            desVC.twitter = ""
+//        } else {
+//            let twitAt: String? = "@"
+//            desVC.twitter = (twitAt! + (restaurantsNames[indexPath.row].contact?.twitter)!)
+//        }
+//
+//        desVC.cordLat = (restaurantsNames[indexPath.row].location?.lat)!
+//        desVC.cordLong = (restaurantsNames[indexPath.row].location?.lng)!
+//
+//
+//        self.navigationController?.pushViewController(desVC, animated: true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -110,9 +159,10 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         return restaurantCat[row]
     }
 
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        if 
-//    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(restaurantCat[row].lowercased())
+        currentPick = restaurantCat[row]
+    }
     
     
     
@@ -194,6 +244,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 let restaurantsData = try JSONDecoder().decode(RestaurantList.self, from: data!)
                 //return the number of restaurants print(restaurantsData.restaurants.count)
                 self.restaurantsNames = restaurantsData.restaurants
+                self.filterArray = restaurantsData.restaurants
                 self.goThroughCat()
             } catch {
                 print(error)
@@ -213,7 +264,34 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 restaurantCat.append(currentCat)
             }
         }
-        restaurantCat.append("All")
+        restaurantCat.insert("All", at: 0)
+        restaurantCat.insert("", at: 0)
+    }
+    
+    func goThroughFilter (_: String){
+        for restFilter in restaurantsNames {
+            let currentP = restFilter.category
+//            if currentPick == ""{
+//                filterArray.append(restaurantsNames[0])
+//            }
+            if currentPick == currentP {
+                filterArray.append(restFilter)
+            } else {
+                if currentPick == "All"{
+                    filterArray = restaurantsNames
+                }
+            }
+        }
+    }
+    
+    
+    @IBAction func catPicked(_ sender: Any) {
+        filterArray = [Restaurant]()
+        goThroughFilter(currentPick)
+        
+        print(filterArray.count)
+        
+        collectionView.reloadData()
     }
 }
 
