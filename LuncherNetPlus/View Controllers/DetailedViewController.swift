@@ -17,7 +17,7 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var stateLbl: UILabel!
     @IBOutlet weak var zipcodeLbl: UILabel!
     @IBOutlet weak var twitterLbl: UILabel!
-    @IBOutlet weak var phoneNumberLbl: UILabel!
+//    @IBOutlet weak var phoneNumberLbl: UILabel!
     
     @IBOutlet weak var phoneTextView: UITextView!
     
@@ -37,7 +37,7 @@ class DetailedViewController: UIViewController {
         cityLbl.text! = city
         stateLbl.text! = state
         zipcodeLbl.text! = zip
-        phoneNumberLbl.text! = phoneNum
+//        phoneNumberLbl.text! = phoneNum
         twitterLbl.text! = twitter
         phoneTextView.text! =  phoneNum
     }

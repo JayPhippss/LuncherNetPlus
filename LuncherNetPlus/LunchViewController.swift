@@ -67,20 +67,20 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         desVC.restName = restaurantsNames[indexPath.row].name.capitalized
         desVC.catName = restaurantsNames[indexPath.row].category.capitalized
 
-        desVC.address = (restaurantsNames[indexPath[0]].location?.address)!
-        desVC.city = (restaurantsNames[indexPath[0]].location?.city)!
-        desVC.state = (restaurantsNames[indexPath[0]].location?.state)!
+        desVC.address = (restaurantsNames[indexPath.row].location?.address)!
+        desVC.city = (restaurantsNames[indexPath.row].location?.city)!
+        desVC.state = (restaurantsNames[indexPath.row].location?.state)!
 
-        if (restaurantsNames[indexPath[0]].location?.postalCode == nil){
+        if (restaurantsNames[indexPath.row].location?.postalCode == nil){
             desVC.zip = ""
         } else {
-            desVC.zip = (restaurantsNames[indexPath[0]].location?.postalCode)!
+            desVC.zip = (restaurantsNames[indexPath.row].location?.postalCode)!
         }
 
-        if (restaurantsNames[indexPath[0]].contact?.formattedPhone == nil){
+        if (restaurantsNames[indexPath.row].contact?.formattedPhone == nil){
             desVC.phoneNum = ""
         } else {
-            desVC.phoneNum = (restaurantsNames[indexPath[0]].contact?.formattedPhone)!
+            desVC.phoneNum = (restaurantsNames[indexPath.row].contact?.formattedPhone)!
         }
 
         if (restaurantsNames[indexPath.row].contact?.twitter == nil){
