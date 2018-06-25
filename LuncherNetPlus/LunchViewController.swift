@@ -23,6 +23,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     var restaurantsNames = [Restaurant]()
     var restaurantCat = [String]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +91,8 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             desVC.twitter = (twitAt! + (restaurantsNames[indexPath.row].contact?.twitter)!)
         }
 
-//        desVC.cordLat = (restaurantsNames[indexPath[0]].location?.lat)!
-//        desVC.cordLong = (restaurantsNames[indexPath[0]].location?.lng)!
+        desVC.cordLat = (restaurantsNames[indexPath.row].location?.lat)!
+        desVC.cordLong = (restaurantsNames[indexPath.row].location?.lng)!
 
 
         self.navigationController?.pushViewController(desVC, animated: true)
@@ -110,11 +111,8 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
 
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        <#code#>
+//        if 
 //    }
-    
-    
-    
     
     
     
@@ -154,7 +152,16 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             
         }
     }
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MapViewController{
+            let vc = segue.destination as? MapViewController
+            
+        }
+    }
+    
+    
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: true, completion: nil)
@@ -183,9 +190,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 return
             }
             
-            
             do{
-                
                 let restaurantsData = try JSONDecoder().decode(RestaurantList.self, from: data!)
                 //return the number of restaurants print(restaurantsData.restaurants.count)
                 self.restaurantsNames = restaurantsData.restaurants
