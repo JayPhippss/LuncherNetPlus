@@ -228,10 +228,51 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhoneX Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="cn0-hX-HoD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcl-HY-tab" userLabel="refreshBtn">
+                                <rect key="frame" x="173" y="44" width="29" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_webRefresh"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-EJ-7wO" userLabel="forwardBtn">
+                                <rect key="frame" x="223" y="44" width="152" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_webForward"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-ed-du8" userLabel="backBtn">
+                                <rect key="frame" x="0.0" y="44" width="165" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_webBack"/>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-zY-f9a">
+                                <rect key="frame" x="0.0" y="77" width="375" height="652"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cn0-hX-HoD" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="NQj-Rl-XcD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="cn0-hX-HoD" secondAttribute="bottom" id="eip-OO-XR6"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="cn0-hX-HoD" secondAttribute="trailing" id="fb9-PT-AUw"/>
+                            <constraint firstItem="cn0-hX-HoD" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gXA-rj-mqP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Internet" image="tab_internets" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="backBrn" destination="ynB-ed-du8" id="lBt-uV-ZWb"/>
+                        <outlet property="forwardBtn" destination="QmR-EJ-7wO" id="vr8-rm-3TK"/>
+                        <outlet property="refreshBtn" destination="Tcl-HY-tab" id="nBD-TA-YNE"/>
+                        <outlet property="webView" destination="Acl-zY-f9a" id="OwS-dj-fqX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -599,6 +640,9 @@
     <resources>
         <image name="cellGradientBackground" width="320" height="116"/>
         <image name="iPhoneX Launch Screen" width="375" height="812"/>
+        <image name="ic_webBack" width="13" height="25"/>
+        <image name="ic_webForward" width="13" height="25"/>
+        <image name="ic_webRefresh" width="29" height="25"/>
         <image name="icon_map" width="30" height="30"/>
         <image name="loginBoxRec" width="290" height="368"/>
         <image name="loginBtns" width="293" height="34"/>

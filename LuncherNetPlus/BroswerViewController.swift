@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import WebKit
 
-class BroswerViewController: UIViewController {
-
+class BroswerViewController: UIViewController, WKNavigationDelegate {
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var backBrn: UIButton!
+    @IBOutlet weak var refreshBtn: UIButton!
+    @IBOutlet weak var forwardBtn: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webView.navigationDelegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +29,9 @@ class BroswerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getUrlCall()
+    }
 
     /*
     // MARK: - Navigation
@@ -32,4 +43,10 @@ class BroswerViewController: UIViewController {
     }
     */
 
+    func getUrlCall() {
+        let urlText = "https://www.citi.com"
+        let url: URL = URL(string: urlText)!
+        let urlRequest: URLRequest = URLRequest(url: url)
+        webView.load(urlRequest)
+    }
 }

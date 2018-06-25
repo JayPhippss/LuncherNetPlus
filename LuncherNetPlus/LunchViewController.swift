@@ -207,8 +207,8 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             if restaurantCat.contains(currentCat) == false{
                 restaurantCat.append(currentCat)
             }
-            
         }
+        restaurantCat.append("All")
     }
 }
 
