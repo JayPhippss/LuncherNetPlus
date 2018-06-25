@@ -9,17 +9,22 @@
 import UIKit
 import WebKit
 
+
 class BroswerViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var backBrn: UIButton!
     @IBOutlet weak var refreshBtn: UIButton!
     @IBOutlet weak var forwardBtn: UIButton!
     
+    @IBOutlet weak var progressView: UIProgressView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.progressView.progress = 0
+        
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         webView.navigationDelegate = self
         // Do any additional setup after loading the view.
     }
@@ -32,21 +37,44 @@ class BroswerViewController: UIViewController, WKNavigationDelegate {
     override func viewDidAppear(_ animated: Bool) {
         getUrlCall()
     }
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtnClick(_ sender: Any) {
+        //if it can go back then go back
+        if(webView.canGoBack){
+            //forwardBtn.isEnabled = true
+            webView.goBack()
+        }
     }
-    */
-
+    
+    @IBAction func refreshBtnClick(_ sender: Any) {
+        //simply reload the page
+        webView.reload()
+    }
+    
+    @IBAction func forwardBtnClick(_ sender: Any) {
+        //if it can go forward the go forward
+        if(webView.canGoForward){
+            webView.goForward()
+        }
+    }
+    
+    
     func getUrlCall() {
         let urlText = "https://www.citi.com"
         let url: URL = URL(string: urlText)!
         let urlRequest: URLRequest = URLRequest(url: url)
         webView.load(urlRequest)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        backBrn.isEnabled = webView.canGoBack
+        forwardBtn.isEnabled = webView.canGoForward
     }
 }

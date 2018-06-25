@@ -61,41 +61,41 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
-//        desVC.restN = restaurantsNames[indexPath[0]].name.capitalized
-//        desVC.catN = restaurantsNames[indexPath[0]].category.capitalized
-//
-//        desVC.addyN = (restaurantsNames[indexPath[0]].location?.address)!
-//        desVC.cityN = (restaurantsNames[indexPath[0]].location?.city)!
-//        desVC.stateN = (restaurantsNames[indexPath[0]].location?.state)!
-//
-//        if (restaurantsNames[indexPath[0]].location?.postalCode == nil){
-//            desVC.zipC = ""
-//        } else {
-//            desVC.zipC = (restaurantsNames[indexPath[0]].location?.postalCode)!
-//        }
-//
-//        if (restaurantsNames[indexPath[0]].contact?.formattedPhone == nil){
-//            desVC.phoneN = ""
-//        } else {
-//            desVC.phoneN = (restaurantsNames[indexPath[0]].contact?.formattedPhone)!
-//        }
-//
-//        if (restaurantsNames[indexPath[0]].contact?.twitter == nil){
-//            desVC.twitH = ""
-//        } else {
-//            let twitAt: String? = "@"
-//            desVC.twitH = (twitAt! + (restaurantsNames[indexPath[0]].contact?.twitter)!)
-//        }
-//
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
+        desVC.restName = restaurantsNames[indexPath.row].name.capitalized
+        desVC.catName = restaurantsNames[indexPath.row].category.capitalized
+
+        desVC.address = (restaurantsNames[indexPath[0]].location?.address)!
+        desVC.city = (restaurantsNames[indexPath[0]].location?.city)!
+        desVC.state = (restaurantsNames[indexPath[0]].location?.state)!
+
+        if (restaurantsNames[indexPath[0]].location?.postalCode == nil){
+            desVC.zip = ""
+        } else {
+            desVC.zip = (restaurantsNames[indexPath[0]].location?.postalCode)!
+        }
+
+        if (restaurantsNames[indexPath[0]].contact?.formattedPhone == nil){
+            desVC.phoneNum = ""
+        } else {
+            desVC.phoneNum = (restaurantsNames[indexPath[0]].contact?.formattedPhone)!
+        }
+
+        if (restaurantsNames[indexPath.row].contact?.twitter == nil){
+            desVC.twitter = ""
+        } else {
+            let twitAt: String? = "@"
+            desVC.twitter = (twitAt! + (restaurantsNames[indexPath.row].contact?.twitter)!)
+        }
+
 //        desVC.cordLat = (restaurantsNames[indexPath[0]].location?.lat)!
 //        desVC.cordLong = (restaurantsNames[indexPath[0]].location?.lng)!
-//
-//
-//        self.navigationController?.pushViewController(desVC, animated: true)
-//    }
+
+
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

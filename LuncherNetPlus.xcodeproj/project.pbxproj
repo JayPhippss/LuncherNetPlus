@@ -13,6 +13,7 @@
 		760F7DAF20DAB16F00895C21 /* Dealers - Solid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */; };
 		7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642239D20D9927A0054038F /* NavigationViewController.swift */; };
 		765C61E120DD893500945784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765C61E020DD893500945784 /* MapViewController.swift */; };
+		7675303D20E0973B00B2A4AC /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675303C20E0973B00B2A4AC /* DetailedViewController.swift */; };
 		7692749620D45A3500A3062A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7692749520D45A3500A3062A /* AppDelegate.swift */; };
 		7692749D20D45A3500A3062A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692749B20D45A3500A3062A /* Main.storyboard */; };
 		7692749F20D45A3600A3062A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7692749E20D45A3600A3062A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Solid.otf"; sourceTree = "<group>"; };
 		7642239D20D9927A0054038F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		765C61E020DD893500945784 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7675303C20E0973B00B2A4AC /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		7692749220D45A3500A3062A /* LuncherNetPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuncherNetPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7692749520D45A3500A3062A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7692749C20D45A3500A3062A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				765C61E020DD893500945784 /* MapViewController.swift */,
+				7675303C20E0973B00B2A4AC /* DetailedViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7675303D20E0973B00B2A4AC /* DetailedViewController.swift in Sources */,
 				76A7BF3E20DD522800C50516 /* ImageHandler.swift in Sources */,
 				76A7BF3B20DD51EC00C50516 /* RestaurantLists.swift in Sources */,
 				76AE07F920D819ED00CDE39B /* CreateAccountViewController.swift in Sources */,
