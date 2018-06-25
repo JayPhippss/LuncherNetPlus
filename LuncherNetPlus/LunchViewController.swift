@@ -157,7 +157,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MapViewController{
             let vc = segue.destination as? MapViewController
-            
+            vc?.restaurantLocations = restaurantsNames
         }
     }
     

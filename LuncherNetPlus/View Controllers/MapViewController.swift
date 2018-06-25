@@ -14,14 +14,22 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    
+    var restaurantLocations = [Restaurant]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        for restLoc in restaurantLocations{
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        let restCords = CLLocationCoordinate2D(latitude: (restLoc.location?.lat)!  , longitude: (restLoc.location?.lng)!)
+        let restAnn = RestaurantAnnotation(coordinate: restCords, title: restLoc.name.capitalized, subtitle: restLoc.category.capitalized)
+        mapView.addAnnotation(restAnn)
+        mapView.setRegion(restAnn.region1, animated: true)
     }
-
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

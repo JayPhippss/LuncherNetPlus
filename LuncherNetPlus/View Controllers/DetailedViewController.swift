@@ -22,6 +22,8 @@ class DetailedViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var twitterBtn: UIButton!
+    
     var restName = "", catName = "", address = "", city = "", state = "", zip = "", phoneNum = "", twitter = ""
     
     var cordLat = 0.0, cordLong = 0.0
@@ -47,7 +49,8 @@ class DetailedViewController: UIViewController{
         zipcodeLbl.text! = zip
         twitterLbl.text! = twitter
         phoneTextView.text! =  phoneNum
-//        twitterBtn.setTitle(twitter, for: .normal)
+        twitterBtn.setTitle(twitter, for: .normal)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,15 +59,6 @@ class DetailedViewController: UIViewController{
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
 }

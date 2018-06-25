@@ -359,18 +359,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqb-uf-ZH1">
+                                <rect key="frame" x="8" y="700" width="359" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LOF-Wi-ytn" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="19S-fn-5l6"/>
+                            <constraint firstItem="tqb-uf-ZH1" firstAttribute="top" secondItem="nXO-Yz-eoo" secondAttribute="bottom" constant="8" id="2o2-HE-hgM"/>
                             <constraint firstItem="7j6-iO-FIx" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="3TN-17-AdG"/>
                             <constraint firstItem="KsY-nH-hLB" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="5Eu-Py-cKC"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="P5B-jM-2lY" secondAttribute="trailing" id="6P4-Mf-vDC"/>
+                            <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="tqb-uf-ZH1" secondAttribute="trailing" constant="8" id="6qF-mR-Bk2"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="LOF-Wi-ytn" secondAttribute="trailing" constant="8" id="9Ve-Vg-8ip"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="BwK-9s-BC4" secondAttribute="trailing" constant="8" id="9bM-FV-9q0"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="KsY-nH-hLB" secondAttribute="trailing" constant="8" id="9sD-oj-Mvm"/>
                             <constraint firstItem="7j6-iO-FIx" firstAttribute="top" secondItem="P5B-jM-2lY" secondAttribute="bottom" constant="8" id="AI4-x6-P8e"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="T6H-Ki-BtP" secondAttribute="trailing" constant="8" id="Dgg-oH-iYF"/>
+                            <constraint firstItem="tqb-uf-ZH1" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="Ihb-YG-569"/>
                             <constraint firstItem="Fqo-0A-DOT" firstAttribute="trailing" secondItem="ub2-0L-UvW" secondAttribute="trailing" constant="8" id="Ksw-tF-Ciy"/>
                             <constraint firstItem="RMk-Sw-OCc" firstAttribute="leading" secondItem="Fqo-0A-DOT" secondAttribute="leading" constant="8" id="LV3-m3-seT"/>
                             <constraint firstItem="KsY-nH-hLB" firstAttribute="top" secondItem="ub2-0L-UvW" secondAttribute="bottom" constant="56" id="MNl-hV-3nq"/>
@@ -403,6 +410,7 @@
                         <outlet property="phoneTextView" destination="nXO-Yz-eoo" id="y5u-Qt-2HH"/>
                         <outlet property="restNameLbl" destination="7j6-iO-FIx" id="5Uj-Su-WqB"/>
                         <outlet property="stateLbl" destination="RMk-Sw-OCc" id="JSx-NV-ciZ"/>
+                        <outlet property="twitterBtn" destination="tqb-uf-ZH1" id="6CA-Pf-rzy"/>
                         <outlet property="twitterLbl" destination="KsY-nH-hLB" id="1po-0f-FNp"/>
                         <outlet property="zipcodeLbl" destination="ub2-0L-UvW" id="t5w-G2-caR"/>
                     </connections>
