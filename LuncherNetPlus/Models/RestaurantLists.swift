@@ -15,7 +15,8 @@ struct RestaurantList: Decodable {
 
 struct Restaurant: Decodable {
     let name: String
-    let backgroundImageURL: URL
+//    let backgroundImageURL: URL
+    let backgroundImageURL: String
     let category: String
     let contact: Contact?
     let location: Location?

@@ -63,7 +63,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 cell.catNameLbl.text = filterArray[indexPath.row].category.capitalized
                 cell.lunchImgView.contentMode = .scaleAspectFill
                 let urlImg = filterArray[indexPath.row].backgroundImageURL
-                cell.lunchImgView.downloadedFrom(url: urlImg)
+        cell.lunchImgView.downloadedFrom(urlString: urlImg)
         
         return cell
     }
