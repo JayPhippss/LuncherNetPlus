@@ -24,7 +24,8 @@ class DetailedViewController: UIViewController{
     
     @IBOutlet weak var twitterBtn: UIButton!
     
-    var restName = "", catName = "", address = "", city = "", state = "", zip = "", phoneNum = "", twitter = ""
+    
+    var restName = "", catName = "", address = "", city = "", state = "", zip = "", phoneNum = "", twitter = "", twitterWithOut = ""
     
     var cordLat = 0.0, cordLong = 0.0
     
@@ -50,7 +51,7 @@ class DetailedViewController: UIViewController{
         twitterLbl.text! = twitter
         phoneTextView.text! =  phoneNum
         twitterBtn.setTitle(twitter, for: .normal)
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +59,14 @@ class DetailedViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func twitterClicked(_ sender: Any) {
+        let vc = BroswerViewController(nibName: "BroswerViewController", bundle: nil)
+        vc.twitterUrl = twitterWithOut
+        vc.getTwitter()
+        navigationController?.pushViewController(vc, animated: true)
+            
+        
+    }
     
     
 }

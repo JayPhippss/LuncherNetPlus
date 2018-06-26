@@ -79,6 +79,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
         
+        
         desVC.restName = filterArray[indexPath.row].name.capitalized
         desVC.catName = filterArray[indexPath.row].category.capitalized
         
@@ -103,6 +104,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         } else {
             let twitAt: String? = "@"
             desVC.twitter = (twitAt! + (filterArray[indexPath.row].contact?.twitter)!)
+            desVC.twitterWithOut = (filterArray[indexPath.row].contact?.twitter)!
         }
         
         desVC.cordLat = (filterArray[indexPath.row].location?.lat)!

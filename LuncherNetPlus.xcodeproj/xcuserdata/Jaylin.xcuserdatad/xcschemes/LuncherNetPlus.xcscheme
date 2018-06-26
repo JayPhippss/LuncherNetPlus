@@ -37,6 +37,17 @@
                BlueprintName = "LuncherNetPlusTests"
                ReferencedContainer = "container:LuncherNetPlus.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LuncherNetPlusTests">
+               </Test>
+               <Test
+                  Identifier = "LuncherNetPlusTests/testBrowserUrl()">
+               </Test>
+               <Test
+                  Identifier = "LuncherNetPlusTests/testTwitterUrl()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

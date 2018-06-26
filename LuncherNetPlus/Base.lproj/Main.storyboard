@@ -379,6 +379,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqb-uf-ZH1">
                                 <rect key="frame" x="8" y="700" width="359" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="twitterClicked:" destination="d74-7T-3ty" eventType="touchUpInside" id="I2U-u9-Tya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -427,7 +430,7 @@
                         <outlet property="phoneTextView" destination="nXO-Yz-eoo" id="y5u-Qt-2HH"/>
                         <outlet property="restNameLbl" destination="7j6-iO-FIx" id="5Uj-Su-WqB"/>
                         <outlet property="stateLbl" destination="RMk-Sw-OCc" id="JSx-NV-ciZ"/>
-                        <outlet property="twitterBtn" destination="tqb-uf-ZH1" id="6CA-Pf-rzy"/>
+                        <outlet property="twitterBtn" destination="tqb-uf-ZH1" id="TYS-DE-6K1"/>
                         <outlet property="twitterLbl" destination="KsY-nH-hLB" id="1po-0f-FNp"/>
                         <outlet property="zipcodeLbl" destination="ub2-0L-UvW" id="t5w-G2-caR"/>
                     </connections>

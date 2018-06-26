@@ -18,6 +18,8 @@ class BroswerViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var progressView: UIProgressView!
     
+    var twitterUrl = ""
+    var citiUrl = "https://www.citi.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +61,17 @@ class BroswerViewController: UIViewController, WKNavigationDelegate {
         }
     }
     
+    func getTwitter() {
+        let urlText = "https://www.twitter.com/"
+        let fullUrl = (urlText + (twitterUrl))
+        let url: URL = URL(string: fullUrl)!
+        let urlRequest: URLRequest = URLRequest(url: url)
+        webView.load(urlRequest)
+    }
     
-    func getUrlCall() {
-        let urlText = "https://www.citi.com"
-        let url: URL = URL(string: urlText)!
+   func getUrlCall() {
+//        let urlText = "https://www.citi.com"
+        let url: URL = URL(string: citiUrl)!
         let urlRequest: URLRequest = URLRequest(url: url)
         webView.load(urlRequest)
     }
