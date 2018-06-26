@@ -194,7 +194,7 @@
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.46875255310000002" green="0.086274509799999996" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="kvf-SY-JW9" firstAttribute="centerY" secondItem="Qjm-d6-Jx7" secondAttribute="centerY" id="DIJ-ar-4aC"/>
                                     <constraint firstAttribute="width" constant="175" id="Hpr-n4-acU"/>

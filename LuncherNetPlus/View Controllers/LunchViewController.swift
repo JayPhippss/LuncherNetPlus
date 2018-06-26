@@ -27,11 +27,12 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     var filterArray = [Restaurant]()
     
     var currentPick = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       viewLeading.constant = -175
+       viewLeading.constant = -168
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         
@@ -63,7 +64,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 cell.catNameLbl.text = filterArray[indexPath.row].category.capitalized
                 cell.lunchImgView.contentMode = .scaleAspectFill
                 let urlImg = filterArray[indexPath.row].backgroundImageURL
-        cell.lunchImgView.downloadedFrom(urlString: urlImg)
+                cell.lunchImgView.downloadedFrom(urlString: urlImg)
         
         return cell
     }
@@ -127,6 +128,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     
     @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
+        self.sideView.backgroundColor = UIColor.clear
         if sender.state == .began || sender.state == .changed{
             let tranlation = sender.translation(in: self.view).x
             

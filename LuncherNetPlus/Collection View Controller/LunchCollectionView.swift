@@ -15,6 +15,7 @@ class LunchCollectionViewCell : UICollectionViewCell{
     @IBOutlet weak var restNameLbl: UILabel!
     @IBOutlet weak var catNameLbl: UILabel!
     
+    
 }
 
 
