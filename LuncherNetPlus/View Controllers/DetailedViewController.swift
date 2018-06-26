@@ -48,7 +48,7 @@ class DetailedViewController: UIViewController{
         cityLbl.text! = city
         stateLbl.text! = state
         zipcodeLbl.text! = zip
-        twitterLbl.text! = twitter
+//        twitterLbl.text! = twitter
         phoneTextView.text! =  phoneNum
         twitterBtn.setTitle(twitter, for: .normal)
         
@@ -60,12 +60,14 @@ class DetailedViewController: UIViewController{
     }
     
     @IBAction func twitterClicked(_ sender: Any) {
-        let vc = BroswerViewController(nibName: "BroswerViewController", bundle: nil)
-        vc.twitterUrl = twitterWithOut
-        vc.getTwitter()
-        navigationController?.pushViewController(vc, animated: true)
-            
-        
+
+        let twUrl = URL(string: "twitter://user?screen_name=\(twitterWithOut)")
+        let twUrlWeb = URL(string: "https://www.twitter.com/\(twitterWithOut)")!
+        if UIApplication.shared.canOpenURL(twUrl!){
+            UIApplication.shared.open(twUrl!, options: [:],completionHandler: nil)
+        }else{
+            UIApplication.shared.open(twUrlWeb, options: [:], completionHandler: nil)
+        }
     }
     
     
