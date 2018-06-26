@@ -121,7 +121,6 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(restaurantCat[row].lowercased())
         currentPick = restaurantCat[row]
     }
     
@@ -247,7 +246,6 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         filterArray = [Restaurant]()
         goThroughFilter(currentPick)
         
-        print(filterArray.count)
         
         collectionView.reloadData()
     }

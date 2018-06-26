@@ -10,6 +10,7 @@ import XCTest
 @testable import LuncherNetPlus
 
 class LuncherNetPlusTests: XCTestCase {
+    
     func TwitterUrl() {
         let browser = BroswerViewController()
         
@@ -24,6 +25,15 @@ class LuncherNetPlusTests: XCTestCase {
         let citiUrl = browser.citiUrl
         
         XCTAssertNotNil(citiUrl)
+        
+    }
+    
+    func RestaurantArrayCount () {
+        let lunchView = LunchViewController()
+        let givenCount = lunchView.restaurantsNames.count
+        
+        XCTAssertNotNil(givenCount)
+//        XCTAssertTrue(givenCount == wrongCount)
         
     }
 }

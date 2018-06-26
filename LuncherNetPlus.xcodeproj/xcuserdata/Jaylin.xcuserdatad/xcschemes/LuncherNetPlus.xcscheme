@@ -39,10 +39,10 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "LuncherNetPlusTests">
+                  Identifier = "LuncherNetPlusTests/testBrowserUrl()">
                </Test>
                <Test
-                  Identifier = "LuncherNetPlusTests/testBrowserUrl()">
+                  Identifier = "LuncherNetPlusTests/testRestaurantArrayCount()">
                </Test>
                <Test
                   Identifier = "LuncherNetPlusTests/testTwitterUrl()">

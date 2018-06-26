@@ -140,6 +140,14 @@
 			path = "URL Request";
 			sourceTree = "<group>";
 		};
+		7607A06020E2851E009A070F /* Collection View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76A7BF3720DD4FBD00C50516 /* LunchCollectionView.swift */,
+			);
+			path = "Collection View Controller";
+			sourceTree = "<group>";
+		};
 		760F7DA920DAB14C00895C21 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +163,11 @@
 			children = (
 				765C61E020DD893500945784 /* MapViewController.swift */,
 				7675303C20E0973B00B2A4AC /* DetailedViewController.swift */,
+				76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */,
+				76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */,
+				76AE07FA20D81A1700CDE39B /* LoginViewController.swift */,
+				76AE07FE20D81AD800CDE39B /* LunchViewController.swift */,
+				76BAAA5720D843FA00A72F15 /* MenuViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 		7692749420D45A3500A3062A /* LuncherNetPlus */ = {
 			isa = PBXGroup;
 			children = (
+				7607A06020E2851E009A070F /* Collection View Controller */,
 				7607A05D20E282B1009A070F /* URL Request */,
 				7607A05A20E28047009A070F /* Extensions */,
 				7675303E20E1412A00B2A4AC /* Map Handler */,
@@ -198,19 +212,13 @@
 				76A7BF3F20DD527C00C50516 /* JSON Handler */,
 				76A7BF3C20DD521700C50516 /* ImageHandler */,
 				76A7BF3920DD51D700C50516 /* Models */,
-				76AE07FC20D81A9B00CDE39B /* BroswerViewController.swift */,
 				7692749520D45A3500A3062A /* AppDelegate.swift */,
 				7692749B20D45A3500A3062A /* Main.storyboard */,
-				76BAAA5720D843FA00A72F15 /* MenuViewController.swift */,
-				76AE07FE20D81AD800CDE39B /* LunchViewController.swift */,
-				76AE07FA20D81A1700CDE39B /* LoginViewController.swift */,
-				76AE07F820D819ED00CDE39B /* CreateAccountViewController.swift */,
 				7692749E20D45A3600A3062A /* Assets.xcassets */,
 				769274A020D45A3600A3062A /* LaunchScreen.storyboard */,
 				76AE080220D82BC300CDE39B /* GoogleService-Info.plist */,
 				769274A320D45A3600A3062A /* Info.plist */,
 				7642239D20D9927A0054038F /* NavigationViewController.swift */,
-				76A7BF3720DD4FBD00C50516 /* LunchCollectionView.swift */,
 				760F7DA920DAB14C00895C21 /* Fonts */,
 			);
 			path = LuncherNetPlus;
@@ -643,6 +651,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VHR8SJQWXF;
 				INFOPLIST_FILE = LuncherNetPlusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,6 +673,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VHR8SJQWXF;
 				INFOPLIST_FILE = LuncherNetPlusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
