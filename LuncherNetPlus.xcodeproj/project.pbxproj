@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B2576213E347341F4802179 /* Pods_LuncherNetPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */; };
+		7607A05C20E2807C009A070F /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607A05B20E2807C009A070F /* ImageViewExtension.swift */; };
+		7607A05F20E282C1009A070F /* UrlRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607A05E20E282C1009A070F /* UrlRequests.swift */; };
 		760F7DAD20DAB16F00895C21 /* Dealers - Shaded.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAA20DAB16900895C21 /* Dealers - Shaded.otf */; };
 		760F7DAE20DAB16F00895C21 /* Dealers - Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */; };
 		760F7DAF20DAB16F00895C21 /* Dealers - Solid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */; };
@@ -47,6 +49,8 @@
 		2BC5D88F9AB5EAB8ACFF1F48 /* Pods_LuncherNetPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuncherNetPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316748E7A2E39DEE09FF2074 /* Pods-LuncherNetPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlusTests/Pods-LuncherNetPlusTests.release.xcconfig"; sourceTree = "<group>"; };
 		595FB642E31BE8202DC1C152 /* Pods-LuncherNetPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuncherNetPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuncherNetPlus/Pods-LuncherNetPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		7607A05B20E2807C009A070F /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		7607A05E20E282C1009A070F /* UrlRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequests.swift; sourceTree = "<group>"; };
 		760F7DAA20DAB16900895C21 /* Dealers - Shaded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Shaded.otf"; sourceTree = "<group>"; };
 		760F7DAB20DAB16A00895C21 /* Dealers - Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Shadow.otf"; sourceTree = "<group>"; };
 		760F7DAC20DAB16C00895C21 /* Dealers - Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dealers - Solid.otf"; sourceTree = "<group>"; };
@@ -120,6 +124,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7607A05A20E28047009A070F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7607A05B20E2807C009A070F /* ImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7607A05D20E282B1009A070F /* URL Request */ = {
+			isa = PBXGroup;
+			children = (
+				7607A05E20E282C1009A070F /* UrlRequests.swift */,
+			);
+			path = "URL Request";
+			sourceTree = "<group>";
+		};
 		760F7DA920DAB14C00895C21 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +191,8 @@
 		7692749420D45A3500A3062A /* LuncherNetPlus */ = {
 			isa = PBXGroup;
 			children = (
+				7607A05D20E282B1009A070F /* URL Request */,
+				7607A05A20E28047009A070F /* Extensions */,
 				7675303E20E1412A00B2A4AC /* Map Handler */,
 				765C61DF20DD890000945784 /* View Controllers */,
 				76A7BF3F20DD527C00C50516 /* JSON Handler */,
@@ -412,9 +434,11 @@
 				76BAAA5820D843FA00A72F15 /* MenuViewController.swift in Sources */,
 				7675304020E1414A00B2A4AC /* Detailed Map View.swift in Sources */,
 				76AE07FF20D81AD800CDE39B /* LunchViewController.swift in Sources */,
+				7607A05C20E2807C009A070F /* ImageViewExtension.swift in Sources */,
 				76A7BF4120DD528B00C50516 /* JSONHandler.swift in Sources */,
 				76AE07FD20D81A9B00CDE39B /* BroswerViewController.swift in Sources */,
 				765C61E120DD893500945784 /* MapViewController.swift in Sources */,
+				7607A05F20E282C1009A070F /* UrlRequests.swift in Sources */,
 				7692749620D45A3500A3062A /* AppDelegate.swift in Sources */,
 				76A7BF3820DD4FBD00C50516 /* LunchCollectionView.swift in Sources */,
 				7642239E20D9927A0054038F /* NavigationViewController.swift in Sources */,

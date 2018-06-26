@@ -38,15 +38,6 @@ class CreateAccountViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func createAccount() {
         if passwordField.text == "" || usernameField.text == "" || nameField.text == ""{
             
@@ -54,7 +45,6 @@ class CreateAccountViewController: UIViewController {
             fieldsAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(fieldsAlert, animated: true)
             
-            //self.creationInfo.text = "Fill In All Fields"
             print("Must fill in all text fields")
         } else {
             Auth.auth().createUser(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in

@@ -65,13 +65,6 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 let urlImg = filterArray[indexPath.row].backgroundImageURL
                 cell.lunchImgView.downloadedFrom(url: urlImg)
         
-        
-//        cell.restNameLbl.text = restaurantsNames[indexPath.row].name.capitalized
-//        cell.catNameLbl.text = restaurantsNames[indexPath.row].category.capitalized
-//        cell.lunchImgView.contentMode = .scaleAspectFill
-//        let urlImg = restaurantsNames[indexPath.row].backgroundImageURL
-//        cell.lunchImgView.downloadedFrom(url: urlImg)
-        
         return cell
     }
     
@@ -112,41 +105,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         
         self.navigationController?.pushViewController(desVC, animated: true)
-        
-        
-        
-        
-//        desVC.restName = restaurantsNames[indexPath.row].name.capitalized
-//        desVC.catName = restaurantsNames[indexPath.row].category.capitalized
-//
-//        desVC.address = (restaurantsNames[indexPath.row].location?.address)!
-//        desVC.city = (restaurantsNames[indexPath.row].location?.city)!
-//        desVC.state = (restaurantsNames[indexPath.row].location?.state)!
-//
-//        if (restaurantsNames[indexPath.row].location?.postalCode == nil){
-//            desVC.zip = ""
-//        } else {
-//            desVC.zip = (restaurantsNames[indexPath.row].location?.postalCode)!
-//        }
-//
-//        if (restaurantsNames[indexPath.row].contact?.formattedPhone == nil){
-//            desVC.phoneNum = ""
-//        } else {
-//            desVC.phoneNum = (restaurantsNames[indexPath.row].contact?.formattedPhone)!
-//        }
-//
-//        if (restaurantsNames[indexPath.row].contact?.twitter == nil){
-//            desVC.twitter = ""
-//        } else {
-//            let twitAt: String? = "@"
-//            desVC.twitter = (twitAt! + (restaurantsNames[indexPath.row].contact?.twitter)!)
-//        }
-//
-//        desVC.cordLat = (restaurantsNames[indexPath.row].location?.lat)!
-//        desVC.cordLong = (restaurantsNames[indexPath.row].location?.lng)!
-//
-//
-//        self.navigationController?.pushViewController(desVC, animated: true)
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -273,9 +232,6 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     func goThroughFilter (_: String){
         for restFilter in restaurantsNames {
             let currentP = restFilter.category
-//            if currentPick == ""{
-//                filterArray.append(restaurantsNames[0])
-//            }
             if currentPick == currentP {
                 filterArray.append(restFilter)
             } else {

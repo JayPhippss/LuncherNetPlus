@@ -61,6 +61,7 @@ class BroswerViewController: UIViewController, WKNavigationDelegate {
         }
     }
     
+    //WebKit view call
    func getUrlCall() {
 //        let urlText = "https://www.citi.com"
         let url: URL = URL(string: citiUrl)!
@@ -68,12 +69,14 @@ class BroswerViewController: UIViewController, WKNavigationDelegate {
         webView.load(urlRequest)
     }
     
+    //Progress Bar
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             progressView.progress = Float(webView.estimatedProgress)
         }
     }
     
+    //WebKit Buttons
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         backBrn.isEnabled = webView.canGoBack
         forwardBtn.isEnabled = webView.canGoForward

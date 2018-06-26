@@ -16,7 +16,6 @@ class DetailedViewController: UIViewController{
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var stateLbl: UILabel!
     @IBOutlet weak var zipcodeLbl: UILabel!
-    @IBOutlet weak var twitterLbl: UILabel!
     
     @IBOutlet weak var phoneTextView: UITextView!
     
@@ -48,7 +47,6 @@ class DetailedViewController: UIViewController{
         cityLbl.text! = city
         stateLbl.text! = state
         zipcodeLbl.text! = zip
-//        twitterLbl.text! = twitter
         phoneTextView.text! =  phoneNum
         twitterBtn.setTitle(twitter, for: .normal)
         
