@@ -194,7 +194,6 @@
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46875255310000002" green="0.086274509799999996" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="kvf-SY-JW9" firstAttribute="centerY" secondItem="Qjm-d6-Jx7" secondAttribute="centerY" id="DIJ-ar-4aC"/>
                                     <constraint firstAttribute="width" constant="175" id="Hpr-n4-acU"/>
@@ -220,7 +219,13 @@
                             <outletCollection property="gestureRecognizers" destination="cMz-oo-mMd" appends="YES" id="QpY-bA-1en"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="LuncherNet" id="FxZ-br-xyW"/>
+                    <navigationItem key="navigationItem" title="LuncherNet" id="FxZ-br-xyW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="wWf-eL-jHK">
+                            <connections>
+                                <action selector="profileClicked:" destination="9pv-A4-QxB" id="Kbr-at-z3c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blurView" destination="kvf-SY-JW9" id="8YF-6l-lal"/>
                         <outlet property="catPicker" destination="DNZ-u9-igu" id="91o-hF-xH4"/>

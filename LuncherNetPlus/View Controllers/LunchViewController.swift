@@ -28,11 +28,13 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     var currentPick = ""
     
+    var menuShowing = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       viewLeading.constant = -168
+       viewLeading.constant = -175
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         
@@ -242,6 +244,19 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
             }
         }
     }
+    
+    @IBAction func profileClicked(_ sender: Any) {
+        if (menuShowing) {
+            viewLeading.constant = -175
+        } else {
+           viewLeading.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuShowing = !menuShowing
+    }
+    
     
     
     @IBAction func catPicked(_ sender: Any) {
