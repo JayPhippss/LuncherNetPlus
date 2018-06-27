@@ -52,13 +52,12 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         // Dispose of any resources that can be recreated.
     }
     
+    //Gets number of cell based on array
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return restaurantsNames.count
         return filterArray.count
-        //temp array with filter on btn click update array and then reload collection view
-        
     }
     
+    //loads all data into collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! LunchCollectionViewCell
         
@@ -71,6 +70,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         return cell
     }
     
+    //Sending data to detail view on cell click
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
@@ -111,24 +111,28 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     }
     
+    //Only 1 picker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
+    //Gets the correct number of categories
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return restaurantCat.count
     }
 
+    //Loads the catergory names in the picker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return restaurantCat[row]
     }
-
+    
+    //Getting catergory from picketview
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentPick = restaurantCat[row]
     }
     
     
-    
+    //Side menu swipe function
     @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
         self.sideView.backgroundColor = UIColor.clear
         if sender.state == .began || sender.state == .changed{
@@ -167,7 +171,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    
+    //Large map segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MapViewController{
             let vc = segue.destination as? MapViewController
@@ -175,7 +179,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    
+    //Logout function
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: true, completion: nil)
@@ -221,6 +225,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         task.resume()
     }
     
+    //Getting Category for picker
     func goThroughCat (){
         for restCat in restaurantsNames {
             let currentCat = restCat.category
@@ -232,6 +237,7 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         restaurantCat.insert("", at: 0)
     }
     
+    //Getting all restaurants based on picker view selection
     func goThroughFilter (_: String){
         for restFilter in restaurantsNames {
             let currentP = restFilter.category
@@ -245,9 +251,13 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    //Side menu button pressed
     @IBAction func profileClicked(_ sender: Any) {
         if (menuShowing) {
             viewLeading.constant = -175
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.layoutIfNeeded()
+            })
         } else {
            viewLeading.constant = 0
             UIView.animate(withDuration: 0.3, animations: {
@@ -257,13 +267,10 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
         menuShowing = !menuShowing
     }
     
-    
-    
+    //When user presses catergory button
     @IBAction func catPicked(_ sender: Any) {
         filterArray = [Restaurant]()
         goThroughFilter(currentPick)
-        
-        
         collectionView.reloadData()
     }
 }
