@@ -221,7 +221,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="LuncherNet" id="FxZ-br-xyW">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="wWf-eL-jHK">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="profileClicked:" destination="9pv-A4-QxB" id="Kbr-at-z3c"/>
                             </connections>

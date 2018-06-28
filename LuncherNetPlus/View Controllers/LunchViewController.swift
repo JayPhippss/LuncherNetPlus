@@ -61,11 +61,12 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! LunchCollectionViewCell
         
+                let urlImg = filterArray[indexPath.row].backgroundImageURL
+                cell.lunchImgView.downloadedFrom(urlString: urlImg)
                 cell.restNameLbl.text = filterArray[indexPath.row].name.capitalized
                 cell.catNameLbl.text = filterArray[indexPath.row].category.capitalized
                 cell.lunchImgView.contentMode = .scaleAspectFill
-                let urlImg = filterArray[indexPath.row].backgroundImageURL
-                cell.lunchImgView.downloadedFrom(urlString: urlImg)
+
         
         return cell
     }
@@ -213,12 +214,12 @@ class LunchViewController: UIViewController, UICollectionViewDataSource, UIColle
                 //return the number of restaurants print(restaurantsData.restaurants.count)
                 self.restaurantsNames = restaurantsData.restaurants
                 self.filterArray = restaurantsData.restaurants
-                self.goThroughCat()
             } catch {
                 print(error)
             }
             DispatchQueue.main.sync {
                 self.collectionView.reloadData()
+                self.goThroughCat()
             }
             
         }

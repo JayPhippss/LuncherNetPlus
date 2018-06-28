@@ -11,6 +11,8 @@ import UIKit
 
 let imageCash = NSCache<NSString, UIImage>()
 
+var urlString: String?
+
 extension UIImageView {
     
     func downloadedFrom(urlString: String){
